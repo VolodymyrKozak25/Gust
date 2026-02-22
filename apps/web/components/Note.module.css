@@ -1,0 +1,19 @@
+.textarea {
+    resize: none;
+    overflow: hidden;
+    border-width: 0.5pt;
+    border-color: transparent;
+}
+
+.textarea:hover {
+    border-color: red;
+}
+
+.input {
+    border-color: transparent;
+    border-width: 0.5pt;
+}
+
+.input:hover {
+    border-color: red;
+}

@@ -1,0 +1,3 @@
+interface a {
+    blue: String;
+}

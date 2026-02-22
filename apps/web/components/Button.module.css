@@ -1,0 +1,10 @@
+.button {
+    border-width: 0.5pt;
+    border-color: #33353384;
+}
+
+.button:hover {
+    background-color: #d3d3d3;
+    font-weight: bold;
+    
+}
