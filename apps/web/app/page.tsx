@@ -1,35 +1,82 @@
 // main page displaying all the notes in a chronological list below
 
-import NoteList from "@/components/NoteList";
 import Note from "@/components/Note";
-import Button from "../components/Button";
+import NoteList from "@/components/NoteList";
+import INote from "@/interfaces/INote";
+
+const notesList: INote[] = [
+  {
+    createdAt: "1",
+    isPermanent: true,
+    time: "13:15",
+    title: "How I did oopsie",
+    text: "Hello adf dfdfadf dsf",
+  },
+  {
+    createdAt: "1",
+    isPermanent: true,
+    time: "3:00PM",
+    title: "123",
+    text: "World adfasdfasdfae f ",
+  },
+  {
+    createdAt: "12",
+    isPermanent: false,
+    time: "12:30",
+    title: "afe",
+    text: "!!!",
+  },
+  {
+    createdAt: "12",
+    isPermanent: false,
+    time: "13:15",
+    title: "How I did oopsie",
+    text: "Hello adf dfdfadf dsf",
+  },
+];
 
 export default function Notes() {
+  // const groupedByDayNotes = notesList.reduce<Record<string, Note[]>>((accumulator, currentNote) => {
+  //   const key = currentNote.createdAt;
+  //   if (!accumulator[key]) {
+  //     accumulator[key] = [];
+  //   }
+  //   accumulator[key].push(currentNote);
+  //   return accumulator;
+  // }, {});
+
   return (
     <>
-      <div className="flex content-center items-center w-full h-12 border-b-[1]">
-        <Button>Review</Button>
-        <Button>Permanent</Button>
-        <Button className="ml-auto">Login</Button>
-      </div>
-      <div className="flex flex-col gap-2 px-2 py-1">
+      <div className="flex flex-col gap-2 px-4 py-1">
         <NoteList date="Today">
           <Note
+            isPermanent={true}
             text="Hello adf dfdfadf dsf"
             title="How I did oopsie"
             time="13:15"
           ></Note>
-          <Note text="World adfasdfasdfae f " title="123" time="3:00PM"></Note>
-          <Note text="!!!" title="afe" time="12:30"></Note>
+          <Note
+            isPermanent={true}
+            text="World adfasdfasdfae f "
+            title="123"
+            time="3:00PM"
+          ></Note>
+          <Note isPermanent text="!!!" title="afe" time="12:30"></Note>
         </NoteList>
         <NoteList date="Yesterday">
           <Note
+            isPermanent
             text="Hello adf dfdfadf dsf"
             title="How I did oopsie"
             time="13:15"
           ></Note>
-          <Note text="World adfasdfasdfae f " title="123" time="3:00PM"></Note>
-          <Note text="!!!" title="afe" time="12:30"></Note>
+          <Note
+            isPermanent
+            text="World adfasdfasdfae f "
+            title="123"
+            time="3:00PM"
+          ></Note>
+          <Note isPermanent text="!!!" title="afe" time="12:30"></Note>
         </NoteList>
       </div>
     </>

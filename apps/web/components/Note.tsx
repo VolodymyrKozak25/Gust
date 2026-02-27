@@ -8,12 +8,18 @@ import styles from "./Note.module.css";
 
 interface NoteProps {
   //id: string;
+  isPermanent: boolean;
   time?: string;
   title?: string;
   text?: string;
 }
 
-export default function Note({ time, title, text }: NoteProps) {
+export default function Note({
+  isPermanent = false,
+  time,
+  title,
+  text,
+}: NoteProps) {
   const noteTextareaRef = useRef<HTMLTextAreaElement>(null);
   const titleInputRef = useRef<HTMLInputElement>(null);
 
