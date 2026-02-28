@@ -4,7 +4,7 @@
 
 ### 1.1 Purpose
 
-This document defines the functional and non-functional requirements for a minimal cross-platform application designed to capture fleeting thoughts via mobile and review them later via desktop/web.
+This document defines the functional and non-functional requirements for a minimal cross-platform application designed to capture fleeting thoughts via mobile and review them later via web.
 
 ### 1.2 Scope
 
@@ -12,7 +12,7 @@ The system provides:
 
 - Fast mobile thought capture with character limit
     
-- Chronological review interface (desktop/web)
+- Chronological review interface web
     
 - Time-based note aging (visual decay)
     
@@ -33,14 +33,13 @@ The system consists of:
 
 - Mobile application (primary input interface)
     
-- Web/Desktop application (review interface)
+- Web application (review interface)
     
 - Backend API
     
 - Relational database (PostgreSQL)
-    
 
-The system supports optional cloud synchronization.
+The system supports optional cloud synchronization and local-only mode.
 
 ---
 
@@ -58,11 +57,10 @@ The system shall:
     
 - Allow promotion of notes to permanent status
     
-- Automatically delete expired notes
+- Automatically delete expired notes (with 7 days in "Trash" period)
     
 - Allow optional user authentication for sync
     
-
 ---
 
 ### 2.3 User Classes
@@ -70,22 +68,18 @@ The system shall:
 1. Guest User (local-only mode)
     
 2. Registered User (synchronized mode)
-    
 
 ---
 
 ### 2.4 Operating Environment
 
 Mobile:
-
-- iOS
     
 - Android
     
-
 Desktop/Web:
 
-- Modern web browsers (Chrome, Safari, Edge, Firefox)
+- Modern web browsers (Chrome, Safari, Firefox)
     
 
 Backend:
@@ -94,12 +88,10 @@ Backend:
     
 - PostgreSQL database
     
-
 ---
+
 
 ## 3. System Features
-
----
 
 ### 3.1 Mobile Note Capture
 
@@ -120,9 +112,8 @@ Allows users to quickly capture short thoughts.
     
 - FR-6: The system shall allow optional account login for sync.
     
-- FR-7: The system shall allow auto-close behavior after submission (optional setting).
+- FR-7: The system shall allow auto-close behavior after submission (optional, default setting).
     
-
 ---
 
 ### 3.2 Note Storage
@@ -141,12 +132,11 @@ Allows users to quickly capture short thoughts.
         
 - FR-9: Pending notes shall expire automatically after a configurable number of days.
     
-- FR-10: Expired notes shall be soft-deleted for a configurable retention period.
-    
+- FR-10: Expired notes shall be soft-deleted for a configurable retention period (default is 7 days).  
 
 ---
 
-### 3.3 Desktop/Web Review
+### 3.3 Web Review
 
 **Description:**  
 Allows users to review and manage captured notes.
@@ -167,7 +157,6 @@ Allows users to review and manage captured notes.
     
 - FR-17: The system shall display a soft-deleted notes view (Trash).
     
-
 ---
 
 ### 3.4 Synchronization
@@ -183,9 +172,8 @@ Allows users to review and manage captured notes.
 
 ---
 
-## 4. Non-Functional Requirements
 
----
+## 4. Non-Functional Requirements
 
 ### 4.1 Performance
 
@@ -193,7 +181,6 @@ Allows users to review and manage captured notes.
     
 - NFR-2: Web interface shall load within 2 seconds under normal conditions.
     
-
 ---
 
 ### 4.2 Security
@@ -203,12 +190,6 @@ Allows users to review and manage captured notes.
 - NFR-4: Data shall be encrypted at rest.
     
 - NFR-5: Communication shall occur over HTTPS.
-    
-
-(Optional Future Requirement)
-
-- NFR-6: Notes may be encrypted client-side before transmission.
-    
 
 ---
 
@@ -218,38 +199,27 @@ Allows users to review and manage captured notes.
     
 - NFR-8: No notifications shall be used for engagement loops.
     
-- NFR-9: The UI shall maintain minimal design with no feed-based infinite scroll.
-    
-
 ---
 
 ### 4.4 Reliability
 
 - NFR-10: The system shall prevent data loss during normal operation.
-    
-- NFR-11: Soft-deleted notes shall be recoverable for a configurable duration.
-    
 
 ---
+
 
 ## 5. Future Enhancements (Out of MVP Scope)
 
 - AI-assisted tagging
     
-- Weekly summaries
-    
 - Export to Markdown
     
 - End-to-end encryption
     
-- Mood tracking
-    
-- Decision-making templates
-    
-- Offline-first advanced sync engine
-    
+- Mood tracking carousel
 
 ---
+
 
 ## 6. Constraints
 
@@ -259,18 +229,18 @@ Allows users to review and manage captured notes.
     
 - The architecture shall allow future encryption integration.
     
-
 ---
+
 
 ## 7. Assumptions
 
 - Users primarily capture short thoughts.
     
-- Desktop/web is used for reflective review.
+- Web is used for reflective review.
     
 - Users understand that unpromoted notes may expire.
     
-
 ---
+
 
 # End of Document

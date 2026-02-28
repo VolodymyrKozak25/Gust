@@ -35,7 +35,7 @@ The system encourages *intentional retention* and *cognitive decluttering*, by g
 
 ## Architecture
 
-You can learn about application architecture in detail using this link: [System Architecture](docs/diagrams/system-architecture.png)
+You can learn about application architecture in detail in the [docs folder](docs)
 
 ### High-Level Structure
 
@@ -105,7 +105,6 @@ Planned:
 ## Roadmap 
 
 - Export to Markdown
-- Weekly summaries
 - Optional end-to-end encryption
 - Lightweight tagging system with NLP and manually
 - Offline-first sync improvements
@@ -119,4 +118,4 @@ Planned:
 
 ## License
 
-MIT License
+[MIT License](LICENSE)
