@@ -1,0 +1,62 @@
+[33mcommit 7e747554943dda2f646d8a4515bfe4d3f2ce0d68[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Sat Feb 28 17:11:47 2026 +0200
+
+    Add database schema and system architecture diagrams.
+
+[33mcommit 859d319616ea746f55ccd768bf3276352f61189b[m
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Sat Feb 28 12:25:43 2026 +0200
+
+    Create docs folder, migrate SRS to docs, create placeholder docs and diagrams, minor readme changes.
+
+[33mcommit b5371e5819ef34aae10d9478164bc40199d247dd[m
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Fri Feb 27 16:49:23 2026 +0200
+
+    Add navigation buttons selected state and minor styling changes.
+
+[33mcommit 1c61db1e7eb3faa821610e409e5b9dfba2447da3[m
+Merge: 1a47228 55f3b1d
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Tue Feb 24 18:04:20 2026 +0200
+
+    Merge remote-tracking branch 'refs/remotes/origin/main'
+
+[33mcommit 55f3b1d510472797d0d66d3744b1531c78a36777[m
+Author: VolodymyrKozak25 <72063090+VolodymyrKozak25@users.noreply.github.com>
+Date:   Tue Feb 24 16:00:05 2026 +0000
+
+    Enhance README with project details and instructions
+    
+    Expanded the README with detailed project information, including core features, architecture, getting started instructions, tech stack, security measures, roadmap, and project goals.
+
+[33mcommit 68bbf5f52c4c9277b4a2969877ea1347294be282[m
+Author: VolodymyrKozak25 <72063090+VolodymyrKozak25@users.noreply.github.com>
+Date:   Tue Feb 24 15:07:55 2026 +0000
+
+    Add MIT License to the project
+
+[33mcommit 1a47228da1aabd689249dc88c433abfc07a0ff33[m
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Tue Feb 24 17:01:10 2026 +0200
+
+    Add shadcn to the web, changed API to typescript
+
+[33mcommit 5df89ae96618bf499f238f8d2da129787dc09493[m
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Mon Feb 23 15:10:40 2026 +0200
+
+    Add dummy API logic
+
+[33mcommit b45354eec9bb0306d38c1b0c523d45352f5932fe[m
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Sun Feb 22 15:35:02 2026 +0200
+
+    Added dummy readme.md file
+
+[33mcommit 2006294ab8a522fb362d50888f84259a15425ced[m
+Author: VolodymyrKozak25 <volodymyrkozak2545@gmail.com>
+Date:   Sun Feb 22 14:28:32 2026 +0200
+
+    Initial project commit
